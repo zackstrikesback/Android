@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FacebookSharing</string>
+    <string name="facebook_app_id">304106583372566</string>
+    <string name="fb_login_protocol_scheme">fb304106583372566</string>
+    <string name="share">Share Link</string>
+    <string name="hint">Input URL</string>
+</resources>
