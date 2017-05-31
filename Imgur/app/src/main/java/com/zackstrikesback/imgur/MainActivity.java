@@ -65,7 +65,7 @@ public class MainActivity extends ChooseImageActivity {
         ButterKnife.bind(this);
         fetchData();
         Request request = new Request.Builder()
-                .url("https://api.imgur.com/3/gallery/user/rising/0.json")
+                .url("https://api.imgur.com/3/gallery/user/0.json")
                 .header("Authorization","Client-ID 9df18c0b96fcb0d")
                 .header("User-Agent","androdimgur")
                 .build();

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.text.ClipboardManager;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ public class ChooseImageFragment extends Fragment {
     private Bitmap mImagePreviewBitmap;
     private Uri mImageUri;
     private String mImgurUrl;
+    private String dImgurUrl;
 
     private MyImgurUploadTask mImgurUploadTask;
     private int mImgurUploadStatus;
@@ -35,8 +37,9 @@ public class ChooseImageFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         if (mImagePreviewBitmap != null) {
             ((ImageView) getView().findViewById(R.id.choose_image_preview)).setImageBitmap(mImagePreviewBitmap);
-            if (mImageUri != null && mImgurUrl == null)
+            if (mImageUri != null && mImgurUrl == null) {
                 new MyImgurUploadTask(mImageUri).execute();
+            }
         }
     }
 
@@ -51,7 +54,6 @@ public class ChooseImageFragment extends Fragment {
         }
 
         if (mImgurUploadStatus != 0) {
-            // update the TextView
             setImgurUploadStatus(mImgurUploadStatus);
         }
     }
@@ -87,6 +89,9 @@ public class ChooseImageFragment extends Fragment {
             mImgurUploadTask = null;
             if (imageId != null) {
                 mImgurUrl = "http://imgur.com/" + imageId;
+                Snackbar mySnackbar = Snackbar.make(getView(), R.string.snackbar_text, Snackbar.LENGTH_LONG);
+                mySnackbar.setAction(R.string.undo_string, new MyUndoListener());
+                mySnackbar.show();
                 setImgurUploadStatus(R.string.choose_image_upload_status_success);
                 if (isResumed()) {
                     getView().findViewById(R.id.imgur_link_layout).setVisibility(View.VISIBLE);
@@ -99,12 +104,21 @@ public class ChooseImageFragment extends Fragment {
                     getView().findViewById(R.id.imgur_link_layout).setVisibility(View.GONE);
                     if (isVisible()) {
                         ((ImageView) getView().findViewById(R.id.choose_image_preview)).setImageBitmap(null);
-                        Toast.makeText(getActivity(), R.string.imgur_upload_error, Toast.LENGTH_LONG).show();
+                        Snackbar.make(getView(), R.string.imgur_upload_error, Snackbar.LENGTH_LONG)
+                                .show();
                     }
                 }
             }
             if (isVisible())
                 getView().findViewById(R.id.choose_image_button).setEnabled(true);
+        }
+    }
+
+    public class MyUndoListener implements View.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            // Code to undo the user's last action
         }
     }
 
@@ -144,7 +158,7 @@ public class ChooseImageFragment extends Fragment {
         if (view.getId() == R.id.copy_link) {
             clipboardManager.setText(mImgurUrl);
         }
-        Toast.makeText(getActivity(), R.string.copied_link, Toast.LENGTH_SHORT).show();
+        Snackbar.make(view, R.string.copied_link, Snackbar.LENGTH_SHORT).show();
     }
 
 }

@@ -1,5 +1,6 @@
 package com.zackstrikesback.imgur;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -52,7 +53,7 @@ public class ChooseImageActivity extends ActionBarActivity {
         else if (item.getItemId() == R.id.menu_logout) {
             ImgurAuthorization.getInstance().logout();
             startActivity(new Intent(getApplicationContext(), ChooseImageActivity.class));
-            Toast.makeText(this, R.string.logged_out, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.logged_out, Toast.LENGTH_LONG).show();
             return true;
         }
         else if (item.getItemId() == R.id.menu_gallery){
