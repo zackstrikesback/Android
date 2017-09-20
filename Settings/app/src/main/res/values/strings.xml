@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Settings</string>
+    <string name="pref_sync">pref_sync</string>
+    <string name="pref_syncConnectionTypes_default">1</string>
+    <string name="sync_on">Checked On</string>
+    <string name="sync_off">Checked Off</string>
+
+    <string-array name="pref_syncConnectionTypes_entries">
+        <item>Local</item>
+        <item>Remote</item>
+    </string-array>
+
+    <string-array name="pref_syncConnectionTypes_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+</resources>
