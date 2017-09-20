@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Poll</string>
+    <string name="create">Create Poll</string>
+    <string name="vote">Vote</string>
+    <string name="results">Your Data</string>
+    <string name="name">Poll Name</string>
+    <string name="pic">Image</string>
+    <string name="query">Yes/No Question?</string>
+
+    <string name="Q1">Have you skydived?</string>
+    <string name="Q2">Have you bungee jumped?</string>
+    <string name="Q3">Have you swam with sharks?</string>
+    <string name="Q4">Have you skied?</string>
+    <string name="Q5">Have you snowboarded?</string>
+    <string name="Q6">Have you surfed?</string>
+    <string name="Q7">Have you traveled internationally?</string>
+    <string name="Q8">Have you voted?</string>
+    <string name="Q9">Do you have a tattoo?</string>
+    <string name="Q10">Do you smoke?</string>
+
+    <string-array name="poll_q">
+        <item>@string/Q1</item>
+        <item>@string/Q2</item>
+        <item>@string/Q3</item>
+        <item>@string/Q4</item>
+        <item>@string/Q5</item>
+        <item>@string/Q6</item>
+        <item>@string/Q7</item>
+        <item>@string/Q8</item>
+        <item>@string/Q9</item>
+        <item>@string/Q10</item>
+    </string-array>
+
+    <string-array name="P1">
+        <item name="Name">Skydiving</item>
+        <item name="Question">@string/Q1</item>
+    </string-array>
+    <string-array name="P2">
+        <item name="Name">Bungee</item>
+        <item name="Question">@string/Q2</item>
+    </string-array>
+    <string-array name="P3">
+        <item name="Name">Sharks</item>
+        <item name="Question">@string/Q3</item>
+    </string-array>
+    <string-array name="P4">
+        <item name="Name">Ski</item>
+        <item name="Question">@string/Q4</item>
+    </string-array>
+    <string-array name="P5">
+        <item name="Name">Snowboard</item>
+        <item name="Question">@string/Q5</item>
+    </string-array>
+    <string-array name="P6">
+        <item name="Name">Surf</item>
+        <item name="Question">@string/Q6</item>
+    </string-array>
+    <string-array name="P7">
+        <item name="Name">Travel</item>
+        <item name="Question">@string/Q7</item>
+    </string-array>
+    <string-array name="P8">
+        <item name="Name">Voted</item>
+        <item name="Question">@string/Q8</item>
+    </string-array>
+    <string-array name="P9">
+        <item name="Name">Tattoo</item>
+        <item name="Question">@string/Q9</item>
+    </string-array>
+    <string-array name="P10">
+        <item name="Name">Smoke</item>
+        <item name="Question">@string/Q10</item>
+    </string-array>
+    <array name="example_polls">
+        <item>@array/P1</item>
+        <item>@array/P2</item>
+        <item>@array/P3</item>
+        <item>@array/P4</item>
+        <item>@array/P5</item>
+        <item>@array/P6</item>
+        <item>@array/P7</item>
+        <item>@array/P8</item>
+        <item>@array/P9</item>
+        <item>@array/P10</item>
+    </array>
+</resources>

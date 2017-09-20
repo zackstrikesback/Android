@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/uxMyToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/uxPager"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button android:id="@+id/yesBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YES" />
+
+        <Button android:id="@+id/noBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

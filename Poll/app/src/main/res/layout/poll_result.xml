@@ -1,0 +1,91 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/rImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_toRightOf="@+id/rImage">
+
+        <TextView
+            android:id="@+id/rName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAME"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/rQuery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUESTION"
+            android:textAppearance="?android:textAppearanceLarge" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YES:"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:paddingRight="15dp"/>
+
+            <TextView
+                android:id="@+id/yCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:paddingRight="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO:"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:paddingRight="15dp"/>
+
+            <TextView
+                android:id="@+id/nCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:paddingRight="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poll #"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:contentDescription="Touch to close" />
+
+</RelativeLayout>
